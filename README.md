@@ -1,8 +1,6 @@
-# LAMP stack built with Docker Compose
+# Serveurs LAMP avec Docker & Docker composer
 
-![Landing Page](https://preview.ibb.co/gOTa0y/LAMP_STACK.png)
-
-A basic LAMP stack environment built using Docker Compose. It consists of the following:
+Voici les différents modules qui seront installés:
 
 * PHP
 * Apache
@@ -10,30 +8,26 @@ A basic LAMP stack environment built using Docker Compose. It consists of the fo
 * phpMyAdmin
 * Redis
 
-As of now, we have different branches for different PHP versions. Use appropriate branch as per your php version needed:
-* [5.4.x](https://github.com/sprintcube/docker-compose-lamp/tree/5.4.x)
-* [5.6.x](https://github.com/sprintcube/docker-compose-lamp/tree/5.6.x)
-* [7.1.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.1.x)
-* [7.2.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.2.x)
-* [7.3.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.3.x)
-* [7.4.x](https://github.com/sprintcube/docker-compose-lamp/tree/7.4.x)
+Différentes versions de PHP:
+* [5.4.x](/5.4.x)
+* [5.6.x](/5.6.x)
+* [7.1.x](/7.1.x)
+* [7.2.x](/7.2.x)
+* [7.3.x](/7.3.x)
+* [7.4.x](/7.4.x)
 
 ## Installation
 
-Clone this repository on your local computer and checkout the appropriate branch e.g. 7.4.x. 
-Run the `docker-compose up -d`.
+Cloner ce repository dans un dossier (Recommendation dans un répertoire portant le nom de la version de PHP) 
+Exécutez la commande: `docker-compose up -d`.
+Lancer composer une nouvelle fois: `docker-compose build`
 
 ```shell
-git clone https://github.com/sprintcube/docker-compose-lamp.git
+git clone https://github.com/rjammet/docker-compose-lamp.git
 cd docker-compose-lamp/
 git fetch --all
-git checkout 7.4.x
 cp sample.env .env
 docker-compose up -d
 ```
 
-Your LAMP stack is now ready!! You can access it via `http://localhost`.
-
-## Configuration and Usage
-
-Please read from appropriate version branch.
+Le containter va s'installer puis s'initialiser. Une fois fini, vos serveurs LAMP sont lancés et accessible.
